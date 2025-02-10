@@ -30,6 +30,13 @@ app.use(cors())
 
 app.use(requestLogger)
 
+//Para hacer que Express muestre contenido estático, la página index.html y el JavaScript, etc., 
+//necesitamos un middleware integrado de Express llamado static.
+app.use(express.static('dist'))
+//Ahora las solicitudes HTTP GET a la dirección www.serversaddress.com/index.html o 
+//www.serversaddress.com mostrarán el frontend de React. Las solicitudes GET a la dirección
+//www.serversaddress.com/api/notes serán manejadas por el código del backend.
+
 let notes = [
     {
       id: 1,
