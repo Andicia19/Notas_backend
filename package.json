@@ -6,7 +6,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../parte2 && npm run build && @powershell Copy-Item dist -Recurse ../parte3/servidor_simple"
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../parte2 && npm run build && @powershell Copy-Item dist -Recurse ../parte4/Notas_backend"
   },
   "author": "Andres",
   "license": "MIT",
