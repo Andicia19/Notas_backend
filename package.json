@@ -5,14 +5,17 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../parte2 && npm run build && @powershell Copy-Item dist -Recurse ../parte3/servidor_simple"
   },
   "author": "Andres",
   "license": "MIT",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
